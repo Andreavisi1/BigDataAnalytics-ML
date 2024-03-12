@@ -3,9 +3,9 @@
 print('Mario_hub')
 print("prova pull and push")
 
-ZIO PERA
+#ZIO PERA
 
-POTHENA
+#POTHENA
 
 #ciao
 

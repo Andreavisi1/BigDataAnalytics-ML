@@ -3,6 +3,12 @@
 import os
 import pyspark
 
+from pyspark.context import SparkContext
+from pyspark.sql.session import SparkSession
+
+sc = SparkContext.getOrCreate()
+spark = SparkSession(sc)
+
 base_path = "BDAchallenge2324"
 
 for root, dirs, files in os.walk(base_path):

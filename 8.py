@@ -7,7 +7,7 @@ from pyspark.sql.functions import split, col, count, size, format_string, input_
 from pyspark.sql.types import StructType
 
 dataset_path = 'BDAchallenge2324' # 'hdfs://192.168.104.45:9000/user/amircoli/BDA2324'
-output_path = 'results' # '/home/amircoli/BDAchallenge2324/results/5'
+output_path = 'results' # '/home/amircoli/BDAchallenge2324/results/8'
 
 sc = SparkContext.getOrCreate()
 spark = SparkSession(sc)

@@ -80,13 +80,13 @@ def second_task(dataframe):
 """
 def third_task(dataframe):
     output_dataframe = dataframe \
-        .withColumn('WDN_speed', split(col('WND'), ',')[1]) \
-        .groupBy('station', 'WDN_speed') \
+        .withColumn('WND_speed', split(col('WND'), ',')[1]) \
+        .groupBy('station', 'WND_speed') \
         .agg(count('*').alias('WND_speed_count')) \
-        .orderBy(col('WND_speed_count').desc(), col('WDN_speed').desc(), col('station').asc()) \
+        .orderBy(col('WND_speed_count').desc(), col('WND_speed').desc(), col('station').asc()) \
         .limit(1) 
     result = '{}, {}, {}'.format(output_dataframe.collect()[0]['station'], \
-                                 output_dataframe.collect()[0]['WDN_speed'], \
+                                 output_dataframe.collect()[0]['WND_speed'], \
                                  output_dataframe.collect()[0]['WND_speed_count'])
     export_txt("task3.txt", result)
     #export_csv(output_dataframe, "task3.csv")
